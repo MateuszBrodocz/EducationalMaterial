@@ -34,6 +34,14 @@ namespace EducationalMaterialData.Migrations
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
+
+                    b.HasData(
+                        new
+                        {
+                            AuthorId = 1,
+                            FirstName = "William",
+                            LastName = "Shakespeare"
+                        });
                 });
 
             modelBuilder.Entity("EducationalMaterialData.Models.Material", b =>
@@ -55,6 +63,9 @@ namespace EducationalMaterialData.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("MaterialId");
 
                     b.HasIndex("AuthorId");
@@ -62,6 +73,24 @@ namespace EducationalMaterialData.Migrations
                     b.HasIndex("MaterialTypeId");
 
                     b.ToTable("Materials");
+
+                    b.HasData(
+                        new
+                        {
+                            MaterialId = 2,
+                            AuthorId = 1,
+                            Description = ".NET Core 3.1 MVC REST API - Full Course",
+                            MaterialTypeId = 4,
+                            Url = "https://www.youtube.com/watch?v=fmvcAzHpsk8&t=7339s"
+                        },
+                        new
+                        {
+                            MaterialId = 3,
+                            AuthorId = 1,
+                            Description = "Getting Started with EF Core",
+                            MaterialTypeId = 5,
+                            Url = "https://docs.microsoft.com/en-gb/ef/core/get-started/overview/first-app?tabs=netcore-cli"
+                        });
                 });
 
             modelBuilder.Entity("EducationalMaterialData.Models.MaterialType", b =>
@@ -77,6 +106,18 @@ namespace EducationalMaterialData.Migrations
                     b.HasKey("MaterialTypeId");
 
                     b.ToTable("MaterialTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            MaterialTypeId = 4,
+                            Name = "MVC REST API"
+                        },
+                        new
+                        {
+                            MaterialTypeId = 5,
+                            Name = "EF Core"
+                        });
                 });
 
             modelBuilder.Entity("EducationalMaterialData.Models.Review", b =>
@@ -97,6 +138,20 @@ namespace EducationalMaterialData.Migrations
                     b.HasIndex("MaterialId");
 
                     b.ToTable("Reviews");
+
+                    b.HasData(
+                        new
+                        {
+                            ReviewId = 6,
+                            Description = "Good Material",
+                            MaterialId = 2
+                        },
+                        new
+                        {
+                            ReviewId = 7,
+                            Description = "Nice One",
+                            MaterialId = 3
+                        });
                 });
 
             modelBuilder.Entity("EducationalMaterialData.Models.Material", b =>

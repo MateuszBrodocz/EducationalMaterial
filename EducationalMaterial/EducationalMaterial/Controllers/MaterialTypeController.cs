@@ -31,7 +31,7 @@ namespace EducationalMaterial.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetMaterialType()
+        public async Task<IActionResult> GetMaterialType([FromQuery] string filter, [FromQuery] string sort)
         {
             var materialType = await _unitOfWork.MaterialType.GetAll();
             if (materialType != null)

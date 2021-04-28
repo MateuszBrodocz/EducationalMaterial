@@ -32,7 +32,7 @@ namespace EducationalMaterial.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAuthor()
+        public async Task<IActionResult> GetAuthor( [FromQuery] string filter,[FromQuery] string sort)
         {
             var author = await _unitOfWork.Author.GetAll();
             if (author != null)

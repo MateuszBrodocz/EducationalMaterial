@@ -1,3 +1,7 @@
+using EducationalMaterialData.Data;
+using EducationalMaterialData.Repository_Pattern.Interfaces;
+using EducationalMaterialData.Repository_Pattern.Repository;
+using EducationalMaterialData.UnitOfWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +29,17 @@ namespace EducationalMaterial
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGen();
             services.AddControllers();
+            services.AddTransient<EducationalMaterialDbContext>();
+            services.AddTransient<IAuthorRepository, AuthorRepository>();
+            services.AddTransient<IMaterialRepository, MaterialRepository>();
+            services.AddTransient<IMaterialTypeRepository, MaterialTypeRepository>();
+            services.AddTransient<IReviewRepository, ReviewRepository>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
