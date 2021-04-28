@@ -1,10 +1,11 @@
-﻿using System;
+﻿using EducationalMaterialData.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace EducationalMaterialData.Repository_Pattern.Interfaces
 {
-    public interface IMaterialRepository
+    public interface IMaterialRepository : IRepository<Material>
     {
     }
 }
