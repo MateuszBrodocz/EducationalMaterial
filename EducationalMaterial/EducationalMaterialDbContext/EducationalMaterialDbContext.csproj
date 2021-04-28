@@ -7,8 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\" />
-    <Folder Include="Repository Pattern\Interfaces\" />
-    <Folder Include="Repository Pattern\Repository\" />
   </ItemGroup>
 
   <ItemGroup>

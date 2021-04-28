@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EducationalMaterialDbContext.Model
+namespace EducationalMaterialData.Models
 {
-    public  class MaterialType
+    public class MaterialType
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Material> Material { get; set; }
     }

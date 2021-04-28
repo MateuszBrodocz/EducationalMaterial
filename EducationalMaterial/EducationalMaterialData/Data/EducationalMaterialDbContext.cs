@@ -1,10 +1,8 @@
-﻿using EducationalMaterialDbContext.Model;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EducationalMaterialDbContext.Data
+namespace EducationalMaterialData.Data
 {
     public class EducationalMaterialDbContext : DbContext
     {

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationalMaterial", "Educ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalMaterialDbContext", "EducationalMaterialDbContext\EducationalMaterialDbContext.csproj", "{FA7B72F4-5D34-48E0-A3F1-2739068E1C51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalMaterialData", "EducationalMaterialData\EducationalMaterialData.csproj", "{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FA7B72F4-5D34-48E0-A3F1-2739068E1C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA7B72F4-5D34-48E0-A3F1-2739068E1C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA7B72F4-5D34-48E0-A3F1-2739068E1C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
