@@ -20,15 +20,17 @@ namespace EducationalMaterialData.Data
             );
             modelBuilder.Entity<Material>().HasData(
                 new Material { 
+                    Name = ".NET Core 3.1 MVC REST API - Full Course",
                     MaterialId = 2, 
                     AuthorId = 1, 
-                    Description = ".NET Core 3.1 MVC REST API - Full Course",
+                    Description = " Course Rest API",
                     Url = "https://www.youtube.com/watch?v=fmvcAzHpsk8&t=7339s", 
                     MaterialTypeId = 4 },
                 new Material { 
+                    Name = "Getting Started with EF Core",
                     MaterialId = 3, 
                     AuthorId = 1, 
-                    Description = "Getting Started with EF Core",
+                    Description = "EF Core ",
                     Url = "https://docs.microsoft.com/en-gb/ef/core/get-started/overview/first-app?tabs=netcore-cli", 
                     MaterialTypeId = 5 }
             );
