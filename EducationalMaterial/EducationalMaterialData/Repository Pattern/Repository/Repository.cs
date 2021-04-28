@@ -1,6 +1,9 @@
-﻿using System;
+﻿using EducationalMaterialData.Data;
+using EducationalMaterialData.Repository_Pattern.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace EducationalMaterialData.Repository_Pattern.Repository
 {
