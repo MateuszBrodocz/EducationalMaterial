@@ -24,7 +24,7 @@ namespace EducationalMaterialData.Repository_Pattern.Repository
 
         public async Task Delete(TEntity entity)
         {
-            _context.Set<TEntity>().Remove(entity);
+             _context.Set<TEntity>().Remove(entity);
         }
 
         public async Task<ICollection<TEntity>> GetAll()

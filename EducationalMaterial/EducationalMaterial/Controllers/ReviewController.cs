@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace EducationalMaterial.Controllers
 {
+    [Authorize(Roles = "Administrator,User")]
     [Route("api/review")]
     [ApiController]
     public class ReviewController : ControllerBase

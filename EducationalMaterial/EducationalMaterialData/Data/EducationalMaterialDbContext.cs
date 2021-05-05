@@ -1,4 +1,5 @@
 ﻿using EducationalMaterialData.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace EducationalMaterialData.Data
 {
-    public class EducationalMaterialDbContext : DbContext
+    public class EducationalMaterialDbContext : IdentityDbContext
     {
 
         public DbSet<Author> Authors { get; set; }
@@ -19,6 +20,7 @@ namespace EducationalMaterialData.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Seed();
         }
     }

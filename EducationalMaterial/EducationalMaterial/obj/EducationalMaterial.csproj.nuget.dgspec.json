@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj": {}
+    "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj": {
+    "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj",
+        "projectUniqueName": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj",
         "projectName": "EducationalMaterialData",
-        "projectPath": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj",
+        "projectPath": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj",
         "packagesPath": "C:\\Users\\wilkqqq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\obj\\",
+        "outputPath": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wilkqqq\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,26 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "IdentityServer4.Storage": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.14, )"
             },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
@@ -99,14 +119,14 @@
         }
       }
     },
-    "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj": {
+    "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj",
+        "projectUniqueName": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj",
         "projectName": "EducationalMaterial",
-        "projectPath": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj",
+        "projectPath": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial.csproj",
         "packagesPath": "C:\\Users\\wilkqqq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\obj\\",
+        "outputPath": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wilkqqq\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,8 +143,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj": {
-                "projectPath": "C:\\Users\\wilkqqq\\Desktop\\Projekt SAtawianm\\Repos\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj"
+              "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj": {
+                "projectPath": "C:\\Users\\wilkqqq\\Desktop\\new optiopns\\xxx\\EducationalMaterial\\EducationalMaterial\\EducationalMaterialData\\EducationalMaterialData.csproj"
               }
             }
           }
@@ -146,6 +166,26 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "IdentityServer4.Storage": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.14, )"
             },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",

@@ -1,4 +1,5 @@
 ﻿using EducationalMaterialData.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace EducationalMaterialData.Data
     {
         public static void Seed(this ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<Author>().HasData(
                 new Author
                 {
@@ -60,6 +62,7 @@ namespace EducationalMaterialData.Data
                     MaterialId = 3
                 }
             );
+            
         }
     }
 }

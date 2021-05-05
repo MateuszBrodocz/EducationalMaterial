@@ -2,6 +2,7 @@
 using EducationalMaterialData.Dtos.MaterialTypeDtos;
 using EducationalMaterialData.Models;
 using EducationalMaterialData.UnitOfWork;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace EducationalMaterial.Controllers
 {
+    [Authorize(Roles = "Administrator,User")]
     [Route("api/materialType")]
     [ApiController]
     public class MaterialTypeController : ControllerBase

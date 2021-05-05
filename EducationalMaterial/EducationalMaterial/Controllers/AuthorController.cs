@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace EducationalMaterial.Controllers
 {
+
     [Route("api/author")]
     [ApiController]
     public class AuthorController : ControllerBase
@@ -57,6 +58,7 @@ namespace EducationalMaterial.Controllers
         /// <param name="directorId"></param>
         /// <returns></returns>
         [HttpGet("{authorId}")]
+        
         public async Task<IActionResult> GetAuthorById(int authorId)
         {
             var items = await _unitOfWork.Author.GetById(authorId);
