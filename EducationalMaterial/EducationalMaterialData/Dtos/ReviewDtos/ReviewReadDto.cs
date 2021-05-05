@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EducationalMaterialData.Dtos.ReviewDtos
 {
-    class ReviewReadDto
+    public class ReviewReadDto
     {
         public int ReviewId { get; set; }
         public string Description { get; set; }

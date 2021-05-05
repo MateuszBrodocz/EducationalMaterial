@@ -15,35 +15,32 @@ namespace EducationalMaterialData.Repository_Pattern.Repository
         public MaterialRepository(EducationalMaterialDbContext context) : base(context)
         {
         }
+
         public async Task<ICollection<Material>> GetAll(string filter = null, string sort = null)
         {
-
             var queryable = _context.Set<Material>().AsQueryable();
 
             if (filter != null)
             {
-                queryable = queryable.Where(Material => Material.Description.Contains(filter));
-            }
-            if (filter != null)
-            {
-                queryable = queryable.Where(Material => Material.Name.Contains(filter));
+                queryable = queryable.Where(material => material.Name.Contains(filter));
             }
 
-            if (sort == "FirstName")
+            if (sort == "MaterialId")
             {
-                queryable = queryable.OrderBy(Material => Material.Url);
+                queryable = queryable.OrderBy(material => material.MaterialId);
             }
-
-            if (sort == "id")
+            if (sort == "Name")
             {
-                queryable = queryable.OrderBy(Material => Material.AuthorId);
+                queryable = queryable.OrderBy(material => material.Name);
             }
-
-            if (sort == "LastName")
+            if (sort == "Reviews")
             {
-                queryable = queryable.OrderBy(Material => Material.Authors);
+                queryable = queryable.OrderBy(author => author.Reviews);
             }
-
+            if (sort == "Url")
+            {
+                queryable = queryable.OrderBy(author => author.Url);
+            }
             return await queryable
                 .AsNoTracking()
                 .ToListAsync();

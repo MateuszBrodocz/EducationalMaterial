@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationalMaterial", "EducationalMaterial\EducationalMaterial.csproj", "{4264D531-FA7B-44F0-A6AD-EF29849A08E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EducationalMaterialData", "EducationalMaterialData\EducationalMaterialData.csproj", "{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserData", "UserData\UserData.csproj", "{6B26732F-A778-4F1F-B434-329565FCDA40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationalMaterialData", "EducationalMaterialData\EducationalMaterialData.csproj", "{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38F5ED69-E471-4DDC-90B4-1E3A7AB6DB8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B26732F-A778-4F1F-B434-329565FCDA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B26732F-A778-4F1F-B434-329565FCDA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B26732F-A778-4F1F-B434-329565FCDA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B26732F-A778-4F1F-B434-329565FCDA40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

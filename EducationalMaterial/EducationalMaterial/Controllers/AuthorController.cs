@@ -32,9 +32,9 @@ namespace EducationalMaterial.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAuthor( [FromQuery] string filter,[FromQuery] string sort)
+        public async Task<IActionResult> GetAuthor([FromQuery] QueryPaginationParameters queryPaginationParameters, [FromQuery] string filter,[FromQuery] string sort)
         {
-            var author = await _unitOfWork.Author.GetAll();
+            var author = await _unitOfWork.Author.GetAll(queryPaginationParameters, filter, sort);
             if (author != null)
             {
                 _logger.LogInformation("GET api/author => OK");
@@ -48,7 +48,6 @@ namespace EducationalMaterial.Controllers
             var result = _mapper.Map<IEnumerable<AuthorReadDto>>(author);
 
             return Ok(result);
-
         }
 
         /// <summary>

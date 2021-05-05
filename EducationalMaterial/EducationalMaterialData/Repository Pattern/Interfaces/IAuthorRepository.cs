@@ -8,5 +8,6 @@ namespace EducationalMaterialData.Repository_Pattern.Interfaces
 {
     public interface IAuthorRepository : IRepository<Author>
     {
+        Task<ICollection<Author>> GetAll(QueryPaginationParameters queryPaginationParameters, string filter = null, string sort = null);
     }
 }

@@ -26,10 +26,14 @@ namespace EducationalMaterialData.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("AuthorId");
 
@@ -61,9 +65,12 @@ namespace EducationalMaterialData.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("Url")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaterialId");
@@ -72,23 +79,25 @@ namespace EducationalMaterialData.Migrations
 
                     b.HasIndex("MaterialTypeId");
 
-                    b.ToTable("Materials");
+                    b.ToTable("Material");
 
                     b.HasData(
                         new
                         {
                             MaterialId = 2,
                             AuthorId = 1,
-                            Description = ".NET Core 3.1 MVC REST API - Full Course",
+                            Description = " Course Rest API",
                             MaterialTypeId = 4,
+                            Name = ".NET Core 3.1 MVC REST API - Full Course",
                             Url = "https://www.youtube.com/watch?v=fmvcAzHpsk8&t=7339s"
                         },
                         new
                         {
                             MaterialId = 3,
                             AuthorId = 1,
-                            Description = "Getting Started with EF Core",
+                            Description = "EF Core ",
                             MaterialTypeId = 5,
+                            Name = "Getting Started with EF Core",
                             Url = "https://docs.microsoft.com/en-gb/ef/core/get-started/overview/first-app?tabs=netcore-cli"
                         });
                 });
@@ -101,11 +110,13 @@ namespace EducationalMaterialData.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("MaterialTypeId");
 
-                    b.ToTable("MaterialTypes");
+                    b.ToTable("MaterialType");
 
                     b.HasData(
                         new
@@ -128,7 +139,9 @@ namespace EducationalMaterialData.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("MaterialId")
                         .HasColumnType("int");

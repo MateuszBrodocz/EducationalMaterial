@@ -8,5 +8,6 @@ namespace EducationalMaterialData.Repository_Pattern.Interfaces
 {
     public interface IMaterialTypeRepository : IRepository<MaterialType>
     {
+         Task<ICollection<MaterialType>> GetAll(string filter = null, string sort = null);
     }
 }

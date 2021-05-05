@@ -15,39 +15,33 @@ namespace EducationalMaterialData.Repository_Pattern.Repository
         public AuthorRepository(EducationalMaterialDbContext context) : base(context)
         { 
         }
-        public async Task<ICollection<Author>> GetAll(string filter = null, string sort = null)
+        public async Task<ICollection<Author>> GetAll(QueryPaginationParameters queryPaginationParameters, string filter = null, string sort = null)
         {
-
             var queryable = _context.Set<Author>().AsQueryable();
 
             if (filter != null)
             {
-                queryable = queryable.Where(Author => Author.FirstName.Contains(filter));
-            }
-            if (filter != null)
-            {
-                queryable = queryable.Where(Author => Author.LastName.Contains(filter));
+                queryable = queryable.Where(author => author.FirstName.Contains(filter));
             }
 
-            if (sort == "FirstName")
+            if (sort == "authorId")
             {
-                queryable = queryable.OrderBy(Author => Author.FirstName);
+                queryable = queryable.OrderBy(author => author.AuthorId);
             }
-
-            if (sort == "id")
+            if (sort == "lastName")
             {
-                queryable = queryable.OrderBy(Author => Author.AuthorId);
+                queryable = queryable.OrderBy(author => author.LastName);
             }
-
-            if (sort == "LastName")
+            if (sort == "material")
             {
-                queryable = queryable.OrderBy(Author => Author.LastName);
+                queryable = queryable.OrderBy(author => author.Material);
             }
-
             return await queryable
+                .Skip((queryPaginationParameters.PageNumber - 1) * queryPaginationParameters.PageSize)
+                .Take(queryPaginationParameters.PageSize)
                 .AsNoTracking()
                 .ToListAsync();
         }
-        
+
     }
 }
