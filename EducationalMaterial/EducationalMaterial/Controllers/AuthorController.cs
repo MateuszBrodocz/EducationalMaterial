@@ -3,6 +3,7 @@ using EducationalMaterialData.Dtos.AuthorDtos;
 using EducationalMaterialData.Models;
 using EducationalMaterialData.UnitOfWork;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -32,7 +33,7 @@ namespace EducationalMaterial.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAuthor([FromQuery] QueryPaginationParameters queryPaginationParameters, [FromQuery] string filter,[FromQuery] string sort)
+        public async Task<IActionResult> GetAuthor([FromQuery] QueryPaginationParameters queryPaginationParameters, [FromQuery] string filter, [FromQuery] string sort)
         {
             var author = await _unitOfWork.Author.GetAll(queryPaginationParameters, filter, sort);
             if (author != null)
@@ -56,20 +57,16 @@ namespace EducationalMaterial.Controllers
         /// <param name="directorId"></param>
         /// <returns></returns>
         [HttpGet("{authorId}")]
-        public async Task<IActionResult> GetAuthorById(int AuthorId)
+        public async Task<IActionResult> GetAuthorById(int authorId)
         {
-            var Author = await _unitOfWork.Author.GetById(AuthorId);
-            if (Author != null)
+            var items = await _unitOfWork.Author.GetById(authorId);
+            if (items != null)
             {
-                _logger.LogInformation("GET api/author => OK");
+                _logger.LogInformation("GET api/author/{authorId} => Ok", authorId);
+                return Ok(_mapper.Map<AuthorReadDto>(items));
             }
-            else
-            {
-                _logger.LogInformation("GET api/author => NOT OK");
-                return NotFound();
-            }
-            var result = _mapper.Map<AuthorReadDto>(Author);
-            return Ok(result);
+            _logger.LogInformation("GET api/author/{AuthorId} => NotFound", authorId);
+            return NotFound();
         }
 
 
@@ -138,5 +135,25 @@ namespace EducationalMaterial.Controllers
             _logger.LogInformation("DELETE api/actors/{actorsID} => OK", authorId);
             return NoContent();
         }
+
+        /// <summary>
+        /// DELETE api/author/{authorId}
+        /// </summary>
+        /// <returns></returns>
+        [HttpPatch("{authorId}")]
+        public async Task<IActionResult> Patch(int authorId, [FromBody] JsonPatchDocument<Author> patchEntity)
+        {
+            var author = await _unitOfWork.Author.GetById(authorId);
+            if (author == null)
+            {
+                return NotFound();
+            }
+
+            patchEntity.ApplyTo(author, ModelState);
+            await _unitOfWork.Save();
+
+            return Ok(author);
+        }
+
     }
 }

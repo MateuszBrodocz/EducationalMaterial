@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace EducationalMaterial
 {
     public class Startup
@@ -30,7 +31,7 @@ namespace EducationalMaterial
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSwaggerGen();
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddTransient<EducationalMaterialDbContext>();
             services.AddTransient<IAuthorRepository, AuthorRepository>();
             services.AddTransient<IMaterialRepository, MaterialRepository>();
@@ -38,7 +39,6 @@ namespace EducationalMaterial
             services.AddTransient<IReviewRepository, ReviewRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            services.AddControllers();
 
         }
 
@@ -54,6 +54,7 @@ namespace EducationalMaterial
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
